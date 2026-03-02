@@ -77,6 +77,27 @@ A successful run will create an organization, submit answers, generate a PDF, an
 - The SHA256 hash of the file is computed and stored in `pdf_sha256`.
 - If WeasyPrint cannot be imported (missing native libs), a fallback with ReportLab creates a simple text-based PDF.
 
+## Design mockup & PDF preview
+
+Before implementing layout changes, a visual mock should be reviewed. The current templates emphasize a neutral, clinical tone – white backgrounds, generous margins, serif headers and clean sans-serif body text. Requirements for design include:
+
+- **Tone:** neutral, clinical, inspection-style; avoid emotional language.
+- **Visual system:** white background, generous margins, serif header font, clean sans-serif body.
+- **Color palette:** muted system colors for statuses:
+  - **Cleared:** soft green
+  - **Watch:** amber
+  - **Elevated:** muted red
+- **Indicators:** horizontal bars convey status and separate sections.
+- **Scope & limitations:** final page includes a concise statement.
+
+These elements are implemented in templates and CSS (`static/css/pdif.css`), with bar classes `.bar.cleared`, `.bar.watch`, and `.bar.elevated`.
+
+A sample rendered report is available in the repository:
+
+- [docs/sample_report.pdf](docs/sample_report.pdf)
+
+This file demonstrates the clinical inspection‑style layout and can be opened directly for review. Adjustments should be approved before further implementation.
+
 ## Deployment (Render)
 
 1. Push repository to GitHub.
