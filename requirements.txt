@@ -3,4 +3,5 @@ django-crispy-forms
 weasyprint
 django-extensions
 reportlab
+whitenoise
 gunicorn

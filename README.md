@@ -44,10 +44,12 @@ A successful run will create an organization, submit answers, generate a PDF, an
    python manage.py seed  # add sample org and questions
    ```
 
-3. Collect static files for production:
+3. Collect static files for production (this is required for Render and for local static serving via WhiteNoise):
    ```bash
-   python manage.py collectstatic
+   python manage.py collectstatic --noinput
    ```
+
+> We use [WhiteNoise](http://whitenoise.evans.io/) to serve static assets directly from Django when running on Render or other platforms without a dedicated CDN. The middleware is already configured in `settings.py`.
 
 4. Run development server:
    ```bash
