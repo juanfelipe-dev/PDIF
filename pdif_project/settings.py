@@ -23,8 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-q3i8)n3q=gjh&$1max@s@v*z^8_jerq$3ebgd$-=fmcdd&w=&k'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv('DJANGO_DEBUG','') == '1' else False
+
+# TEMPORARY: Enable debug for diagnosis on Render.com
+DEBUG = True
 
 # allow hosts from environment, comma-separated; default to wildcard when not provided
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
