@@ -1,5 +1,49 @@
-/* Minimal institutional styling */
-body { background: #fff; color: #212529; }
-h1,h2,h3 { font-family: 'Times New Roman', serif; }
-p, li, input, textarea { font-family: Arial, sans-serif; }
-.btn-primary { background-color: #005b96; border-color: #005b96; }
+/* Institutional/hospital‑grade stylesheet */
+html, body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222222;
+    margin-top: 1.5rem;
+    margin-bottom: .75rem;
+}
+
+p, li {
+    margin-bottom: .75rem;
+}
+
+input, textarea, select {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 750px;
+}
+
+.navbar {
+    padding: .5rem 1rem;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: .3rem;
+}
+
+.btn-primary {
+    background-color: #005b96;
+    border-color: #005b96;
+    font-weight: 600;
+}
+
+footer {
+    font-size: .85rem;
+    color: #6c757d;
+}
+
+/* colored alert bars for PDF preview template are handled inline in template */
