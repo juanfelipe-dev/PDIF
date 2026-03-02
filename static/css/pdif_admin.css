@@ -33,11 +33,21 @@
     background: #0056b3 !important;
 }
 
-/* Table headers */
-#changelist table thead th {
-    background: #e9f2fb;
-    color: #0d3559;
+
+/* Admin app module headers (side and main dashboard) */
+.module h2, .app-auth h2, .app-branding h2, .app-core h2, .app-inspections h2, .module caption {
+    background: #0d3559 !important;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 4px 4px 0 0;
     font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+/* Remove default blue background from module headers */
+.module, .app-auth, .app-branding, .app-core, .app-inspections {
+    background: none !important;
 }
 
 /* SVG icon for admin */
