@@ -33,6 +33,19 @@ input, textarea, select {
     padding: .5rem 1rem;
 }
 
+/* Icon alignment tweaks */
+.icon-hospital {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: .5em;
+}
+.icon-status {
+    height: 24px;
+    vertical-align: middle;
+    margin-top: .5em;
+    margin-right: .5em;
+}
+
 .jumbotron {
     padding: 2rem 1rem;
     background-color: #f8f9fa;

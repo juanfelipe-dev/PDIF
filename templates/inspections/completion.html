@@ -3,7 +3,10 @@
 {% block title %}Review Complete - PDIF{% endblock %}
 
 {% block content %}
-<h2>Thank you</h2>
+<div class="d-flex align-items-center mb-3" style="gap:1em;">
+    <img src="{% static 'img/hospital.svg' %}" alt="Hospital" style="height:40px;" />
+    <h2 class="mb-0">Thank you</h2>
+</div>
 <p>Your submission has been received. A PDF of the report is available below:</p>
 <p><small>SHA256: {{ submission.pdf_sha256 }}</small></p>
 {% if submission.pdf %}

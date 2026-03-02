@@ -3,7 +3,10 @@
 {% block title %}{{ current_org.name|default:'Inspection' }}{% endblock %}
 
 {% block content %}
-<div class="jumbotron">
+<div class="jumbotron text-center">
+  <div class="mb-3">
+    <img src="{% static 'img/hospital.svg' %}" alt="Hospital" style="height:64px;vertical-align:middle;" />
+  </div>
   {% if branding and branding.logo %}
     <img src="{{ branding.logo.url }}" alt="Logo" style="max-height:80px;margin-bottom:1rem;" />
   {% endif %}
@@ -13,10 +16,10 @@
   <p>Complete the questionnaire to generate a formal inspection report.</p>
   <a class="btn btn-primary btn-lg" href="{% url 'inspections:questionnaire' %}" role="button">Begin Review</a>
 </div>
-<!-- example status bars -->
-<div class="mb-4">
-    <div class="bar cleared"></div>
-    <div class="bar watch"></div>
-    <div class="bar elevated"></div>
+<!-- icon bar for status types -->
+<div class="d-flex justify-content-center align-items-center mb-4" style="gap:1.5em;">
+    <span title="Cleared"><img src="{% static 'img/check.svg' %}" alt="Cleared" style="height:24px;vertical-align:middle;" /></span>
+    <span title="Watch"><img src="{% static 'img/alert.svg' %}" alt="Watch" style="height:24px;vertical-align:middle;" /></span>
+    <span title="Elevated"><img src="{% static 'img/danger.svg' %}" alt="Elevated" style="height:24px;vertical-align:middle;" /></span>
 </div>
 {% endblock %}
