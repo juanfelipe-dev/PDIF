@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8">
     <style>
-        body { font-family: sans-serif; margin: 2cm; }
+        body { font-family: sans-serif; margin: 2cm; background: #fff; }
         h1, h2, h3 { font-family: serif; }
         .header { text-align: center; margin-bottom: 1cm; }
+        .branding-strip { height: 1cm; width: 100%; }
         .section { margin-bottom: 1cm; }
         .bar { height: 1em; margin-bottom: .5em; }
         .bar.cleared { background: #c8e6c9; }
         .bar.watch { background: #ffe082; }
         .bar.elevated { background: #ef9a9a; }
+        .footer-note { font-size: .8em; color: #666; margin-top: 2cm; }
     </style>
 </head>
 <body>
+{% if branding and branding.primary_color %}
+<div class="branding-strip" style="background-color: {{ branding.primary_color }};"></div>
+{% endif %}
 <div class="header">
     {% if branding and branding.logo %}
         <img src="{{ branding.logo.url }}" alt="Logo" style="height:50px;" />
@@ -28,5 +33,9 @@
     <p>{{ value }}</p>
 </div>
 {% endfor %}
+
+<div class="footer-note">
+    <p><strong>Scope &amp; limitations:</strong> This document reflects responses provided during the inspection. It does not constitute a comprehensive audit or certification.</p>
+</div>
 </body>
 </html>

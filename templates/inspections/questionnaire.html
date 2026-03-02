@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}Questionnaire - PDIF{% endblock %}
+{% block title %}Questionnaire{% endblock %}
 
 {% block content %}
 <h2>Questionnaire</h2>
 <form method="post">
     {% csrf_token %}
     {% for q in questions %}
+    <!-- separator bar for clarity -->
+    <div class="bar" style="background:#e0e0e0;"></div>
     <div class="form-group">
         <label>{{ q.sort_order }}. {{ q.text }}</label>
         <textarea class="form-control" name="q_{{ q.id }}"></textarea>

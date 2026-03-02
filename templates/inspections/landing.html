@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}Welcome - PDIF Inspection{% endblock %}
+{% block title %}{{ current_org.name|default:'Inspection' }}{% endblock %}
 
 {% block content %}
 <div class="jumbotron">
-  <h1 class="display-4">Institutional Inspection</h1>
-  <p class="lead">Professional hospital-grade inspection platform.</p>
+  {% if branding and branding.logo %}
+    <img src="{{ branding.logo.url }}" alt="Logo" style="max-height:80px;margin-bottom:1rem;" />
+  {% endif %}
+  <h1 class="display-4">{{ current_org.name|default:'Institutional Inspection' }}</h1>
+  <p class="lead">A neutral, clinical review platform.</p>
   <hr class="my-4">
-  <p>This tool walks you through the review process.</p>
+  <p>Complete the questionnaire to generate a formal inspection report.</p>
   <a class="btn btn-primary btn-lg" href="{% url 'inspections:questionnaire' %}" role="button">Begin Review</a>
+</div>
+<!-- example status bars -->
+<div class="mb-4">
+    <div class="bar cleared"></div>
+    <div class="bar watch"></div>
+    <div class="bar elevated"></div>
 </div>
 {% endblock %}
