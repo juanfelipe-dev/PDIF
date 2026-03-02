@@ -18,10 +18,25 @@ This Django project implements a multi-tenant inspection platform with automatic
 1. Create virtual environment and install dependencies:
    ```bash
    python -m venv .venv
-   .venv\Scripts\activate
+   .venv\\Scripts\\activate  # Windows Powershell
    pip install -r requirements.txt
    ```
-   *Note:* the project uses WeasyPrint which requires native libraries (`libgobject`, `cairo`, etc.). On Windows these are not installed by default; we use a ReportLab fallback for dev.
+   *Note:* the project uses WeasyPrint which requires native libraries (`libgobject`, `cairo`, etc.). On Windows these are not installed by default; we use a ReportLab fallback for development.
+
+2. (Optional) load sample submission data
+   ```bash
+   # sample JSON included in tests/sample_submission.json
+   cat tests/sample_submission.json
+   ```
+
+## Running Tests
+
+Automated tests cover model behaviors and key views. Execute via:
+```bash
+python manage.py test inspections
+```
+A successful run will create an organization, submit answers, generate a PDF, and verify the secure download link.
+
 
 2. Apply migrations:
    ```bash
