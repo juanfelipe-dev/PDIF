@@ -1,0 +1,60 @@
+/* Custom admin panel styles for PDIF */
+
+/* Brand header */
+#header {
+    background: #0d3559 !important;
+    color: #fff !important;
+    border-bottom: 3px solid #007bff;
+}
+#header .branding h1, #header .branding h1 a {
+    color: #fff !important;
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Login page */
+#content-main .form-row label {
+    color: #0d3559;
+    font-weight: 600;
+}
+
+/* Buttons */
+.button, input[type="submit"], .submit-row input {
+    background: #007bff !important;
+    color: #fff !important;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s;
+}
+.button:hover, input[type="submit"]:hover, .submit-row input:hover {
+    background: #0056b3 !important;
+}
+
+/* Table headers */
+#changelist table thead th {
+    background: #e9f2fb;
+    color: #0d3559;
+    font-weight: 700;
+}
+
+/* SVG icon for admin */
+.pdif-admin-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    height: 32px;
+    width: 32px;
+}
+
+@media (max-width: 600px) {
+    #header .branding h1 {
+        font-size: 1.2rem;
+    }
+    .pdif-admin-logo {
+        height: 24px;
+        width: 24px;
+    }
+}

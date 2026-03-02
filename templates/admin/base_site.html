@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pdif_admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+    <a href="/admin/" class="pdif-admin-logo-link">
+        <img src="{% static 'img/pdif_admin.svg' %}" class="pdif-admin-logo" alt="PDIF Admin" />
+        <span>PDIF Admin</span>
+    </a>
+{% endblock %}
