@@ -4,6 +4,11 @@
 
 set -e
 
+
+# Install WeasyPrint system dependencies (for Render.com)
+apt-get update
+apt-get install -y libpango-1.0-0 libpangocairo-1.0-0 libcairo2 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+
 # apply database migrations
 python manage.py migrate --noinput
 
