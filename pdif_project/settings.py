@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q3i8)n3q=gjh&$1max@s@v*z^8_jerq$3ebgd$-=fmcdd&w=&k'
 
 
-# TEMPORARY: Enable debug for diagnosis on Render.com
-DEBUG = True
+# Set debug to False for production
+DEBUG = False
 
 # allow hosts from environment, comma-separated; default to wildcard when not provided
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')

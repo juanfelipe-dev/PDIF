@@ -106,7 +106,7 @@ This file demonstrates the clinical inspection‑style layout and can be opened 
 4. Set start command: `gunicorn pdif_project.wsgi` (or use `python manage.py runserver 0.0.0.0:10000` for testing).
 5. Configure environment variables:
    - `DJANGO_SECRET_KEY` (override secret)
-   - `DEBUG=False`
+   - `DEBUG=False` (default in settings.py; set `DEBUG=True` only for local development)
    - `ALLOWED_HOSTS` (e.g. `['*']` or your domain)
    - `DATABASE_URL` (Render managed Postgres)
    - `MEDIA_ROOT` and `STATIC_ROOT` to suitable directories or S3.
