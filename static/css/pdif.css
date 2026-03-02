@@ -5,7 +5,11 @@ html, body {
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
 }
-
+/* horizontal status bars */
+.bar { height: 1em; margin-bottom: .5em; }
+.bar.cleared { background: #c8e6c9; }
+.bar.watch { background: #ffe082; }
+.bar.elevated { background: #ef9a9a; }
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', serif;
     color: #222222;
