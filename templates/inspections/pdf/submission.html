@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: sans-serif; margin: 2cm; }
+        h1, h2, h3 { font-family: serif; }
+        .header { text-align: center; margin-bottom: 1cm; }
+        .section { margin-bottom: 1cm; }
+        .bar { height: 1em; margin-bottom: .5em; }
+        .bar.cleared { background: #c8e6c9; }
+        .bar.watch { background: #ffe082; }
+        .bar.elevated { background: #ef9a9a; }
+    </style>
+</head>
+<body>
+<div class="header">
+    {% if branding and branding.logo %}
+        <img src="{{ branding.logo.url }}" alt="Logo" style="height:50px;" />
+    {% endif %}
+    <h1>Inspection Report</h1>
+    <p>Organization: {{ submission.organization.name }}</p>
+    <p>Date: {{ submission.created_at|date:"Y-m-d H:i" }}</p>
+</div>
+{% for key,value in submission.data.items %}
+<div class="section">
+    <h3>{{ key }}</h3>
+    <p>{{ value }}</p>
+</div>
+{% endfor %}
+</body>
+</html>

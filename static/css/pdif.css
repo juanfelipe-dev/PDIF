@@ -1,0 +1,5 @@
+/* Minimal institutional styling */
+body { background: #fff; color: #212529; }
+h1,h2,h3 { font-family: 'Times New Roman', serif; }
+p, li, input, textarea { font-family: Arial, sans-serif; }
+.btn-primary { background-color: #005b96; border-color: #005b96; }

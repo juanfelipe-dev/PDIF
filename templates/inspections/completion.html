@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Review Complete - PDIF{% endblock %}
+
+{% block content %}
+<h2>Thank you</h2>
+<p>Your submission has been received. A PDF of the report is available below:</p>
+<p><small>SHA256: {{ submission.pdf_sha256 }}</small></p>
+{% if submission.pdf %}
+    <a href="{% url 'inspections:download_pdf' download_token %}" class="btn btn-secondary">Download PDF</a>
+{% else %}
+    <p><em>PDF generation not available at this time.</em></p>
+{% endif %}
+{% endblock %}

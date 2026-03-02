@@ -1,0 +1,6 @@
+Django>=6.0,<7.0
+django-crispy-forms
+weasyprint
+django-extensions
+reportlab
+gunicorn
